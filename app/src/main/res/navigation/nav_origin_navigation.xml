@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_origin_navigation"
+    app:startDestination="@id/mainFragment"
+    >
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="sk.navigation.demo.navigation.OriginMainFragment"
+        android:label="MainFragment"
+        />
+
+    <fragment
+        android:id="@+id/h5Fragment"
+        android:name="sk.navigation.demo.navigation.OriginH5Fragment"
+        android:label="H5Fragment"
+        >
+        <argument
+            android:name="url"
+            app:argType="string"
+            />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_originh5Fragment"
+        app:destination="@id/h5Fragment"
+        app:launchSingleTop="true"
+        />
+
+</navigation>
